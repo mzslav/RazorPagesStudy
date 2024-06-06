@@ -1,0 +1,51 @@
+﻿@page
+@model RazorPagesGeneral.Pages.Books.BooksModel
+@{
+	ViewData["ShowButtons"] = true;
+}
+
+
+
+<h1 class="text-center h1od" style="margin-top: 25px;">Książki w bazie:</h1>
+
+
+<div class="row">
+
+	@if (TempData["SuccessMessage"] != null)
+	{
+		<div class="alert alert-success text-center">
+			@TempData["SuccessMessage"]
+		</div>
+	}
+
+
+	<form method="get" class="mb-3 search-form mx-auto">
+		<div class="input-group">
+			<input class="form-control" asp-for="SearchTerm" />
+			<div class="input-group-append">
+				<button type="submit" class="btn btn-brown">Szukaj</button>
+			</div>
+		</div>
+	</form>
+
+	<style>
+		.search-form {
+			max-width: 400px; 
+		}
+	</style>
+
+
+
+
+
+	<div class="row justify-content-center">
+		@foreach (var item in Model.Books)
+		{
+			<div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+				<partial name="_DisplayBookPartial" model="item" view-data="ViewData" />
+			</div>
+		}
+	</div>
+
+	<vc:head-count department="@null"></vc:head-count>
+</div>

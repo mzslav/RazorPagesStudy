@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.imageThumbnail {
+    padding: 5px;
+    height: 150px;
+    max-width: 150px;
+    border-radius: 5%; /* Додано для округлення кута зображення */
+}
+
+.cardBoxShadow {
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    border-radius: 50px; /* Додано для округлення кутів */
+}
+
+.cardHeaderStyle {
+    background: rgba(139, 69, 19, 1); /* Коричневий колір */
+    background: -moz-linear-gradient(left, rgba(139, 69, 19, 1) 0%, rgba(205, 133, 63, 1) 50%, rgba(244, 164, 96, 1) 51%, rgba(210, 180, 140, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(139, 69, 19, 1)), color-stop(50%, rgba(205, 133, 63, 1)), color-stop(51%, rgba(244, 164, 96, 1)), color-stop(100%, rgba(210, 180, 140, 1)));
+    background: -webkit-linear-gradient(left, rgba(139, 69, 19, 1) 0%, rgba(205, 133, 63, 1) 50%, rgba(244, 164, 96, 1) 51%, rgba(210, 180, 140, 1) 100%);
+    background: -o-linear-gradient(left, rgba(139, 69, 19, 1) 0%, rgba(205, 133, 63, 1) 50%, rgba(244, 164, 96, 1) 51%, rgba(210, 180, 140, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(139, 69, 19, 1) 0%, rgba(205, 133, 63, 1) 50%, rgba(244, 164, 96, 1) 51%, rgba(210, 180, 140, 1) 100%);
+    background: linear-gradient(to right, rgba(139, 69, 19, 1) 0%, rgba(205, 133, 63, 1) 50%, rgba(244, 164, 96, 1) 51%, rgba(210, 180, 140, 1) 100%);
+    border-radius: 50px 50px 0 0 !important; /* Зміни для округлення кутів */
+    color: #000;
+    text-transform: uppercase;
+}
+
+.card {
+    border-radius: 50px; /* Округлення кутів картки */
+}
+
+.card-body {
+    border-radius: 0 0 50px 50px; /* Округлення нижніх кутів */
+}
+
+.buttonShadow {
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    border-radius: 50px; /* Округлення кутів кнопок */
+}
+
+.buttonShadowRed {
+    -webkit-box-shadow: 8px 8px 24px -11px rgba(195, 0, 43, 1);
+    -moz-box-shadow: 8px 8px 24px -11px rgba(195, 0, 43, 1);
+    box-shadow: 8px 8px 24px -11px rgba(195, 0, 43, 1);
+    border-radius: 50px; /* Округлення кутів кнопок */
+}
+
+.buttonShadowBlue {
+    -webkit-box-shadow: 8px 8px 24px -11px rgba(13, 118, 175, 1);
+    -moz-box-shadow: 8px 8px 24px -11px rgba(13, 118, 175, 1);
+    box-shadow: 8px 8px 24px -11px rgba(13, 118, 175, 1);
+    border-radius: 50px; /* Округлення кутів кнопок */
+}
+
+.buttonShadowGreen {
+    -webkit-box-shadow: 8px 8px 24px -11px rgba(0, 140, 21, 1);
+    -moz-box-shadow: 8px 8px 24px -11px rgba(0, 140, 21, 1);
+    box-shadow: 8px 8px 24px -11px rgba(0, 140, 21, 1);
+    border-radius: 50px; /* Округлення кутів кнопок */
+}
+
+.menuBg {
+    background: rgba(77, 38, 0, 1); /* Коричневий колір */
+    background: -moz-linear-gradient(left, rgba(77, 38, 0, 1) 0%, rgba(139, 69, 19, 1) 31%, rgba(205, 133, 63, 1) 51%, rgba(210, 180, 140, 1) 71%, rgba(244, 164, 96, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(77, 38, 0, 1)), color-stop(31%, rgba(139, 69, 19, 1)), color-stop(51%, rgba(205, 133, 63, 1)), color-stop(71%, rgba(210, 180, 140, 1)), color-stop(100%, rgba(244, 164, 96, 1)));
+    background: -webkit-linear-gradient(left, rgba(77, 38, 0, 1) 0%, rgba(139, 69, 19, 1) 31%, rgba(205, 133, 63, 1) 51%, rgba(210, 180, 140, 1) 71%, rgba(244, 164, 96, 1) 100%);
+    background: -o-linear-gradient(left, rgba(77, 38, 0, 1) 0%, rgba(139, 69, 19, 1) 31%, rgba(205, 133, 63, 1) 51%, rgba(210, 180, 140, 1) 71%, rgba(244, 164, 96, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(77, 38, 0, 1) 0%, rgba(139, 69, 19, 1) 31%, rgba(205, 133, 63, 1) 51%, rgba(210, 180, 140, 1) 71%, rgba(244, 164, 96, 1) 100%);
+    background: linear-gradient(to right, rgba(77, 38, 0, 1) 0%, rgba(139, 69, 19, 1) 31%, rgba(205, 133, 63, 1) 51%, rgba(210, 180, 140, 1) 71%, rgba(244, 164, 96, 1) 100%);
+    color: #fff;
+    /* border-radius: 50px; Видалено округлення кутів */
+}
+
+.containerBordered {
+    border-right: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+    border-radius: 50px; /* Округлення кутів контейнера */
+}
+
+.cardTextLeftFloating {
+    text-align: left;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.h1od {
+    padding-top: 30px;
+    border-radius: 50px; /* Округлення кутів заголовку */
+}
+
+
+.btn-brown {
+    background-color: #8B4513; /* Коричневий колір */
+    border-color: #8B4513; /* Колір рамки */
+    color: #fff; /* Колір тексту */
+}
+
+    .btn-brown:hover {
+        background-color: #A0522D; /* Трохи світліший коричневий для ефекту наведення */
+        border-color: #A0522D;
+    }
+
+    .btn-brown:focus, .btn-brown:active:focus, .btn-brown.active:focus {
+        box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #8B4513;
+    }
+

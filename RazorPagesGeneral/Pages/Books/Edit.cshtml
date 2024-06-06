@@ -1,0 +1,98 @@
+﻿@page "{id:int?}"
+@model RazorPagesGeneral.Pages.Books.EditModel
+@{
+    string photoPath = $"/images/{Model.Book.PhotoPath ?? "noimage.png"}";
+    string pageTitle = Model.Book.Id > 0 ? "Edit" : "Create";
+    ViewData["Title"] = pageTitle;
+}
+
+
+<h1 class="h1od" style="margin-top: 15px;"></h1>
+
+<form method="post" class="mt-3" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Book.Id" />
+    <input type="hidden" asp-for="Book.PhotoPath" />
+
+    <div class="row justify-content-center mt-5">
+        <div class="col col-lg-8">
+            <div class="card cardBoxShadow">
+                <div class="card-header cardHeaderStyle text-center">
+                    <div class="form-group row">
+                        <label asp-for="Book.Name" class="col col-lg-4 col-form-label text-right">Edytuj nazwe:</label>
+                        <div class="col col-lg-6">
+                            <input asp-for="Book.Name" class="form-control" placeholder="@Model.Book.Name" />
+                            <span asp-validation-for="Book.Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body cardBodyStyle text-center">
+                    <div class="row">
+                        <div class="col col-lg-9">
+                            <h4 class="cardTextLeftFloating">Book ID: @Model.Book.Id</h4>
+                            <hr />
+                            <div class="form-group row">
+                                <label asp-for="Book.Author" class="col col-lg-4 col-form-label text-right">Edytuj autora:</label>
+                                <div class="col-12 col-lg-6">
+                                    <input asp-for="Book.Author" class="form-control mr-2" placeholder="@Model.Book.Author" />
+                                    <span asp-validation-for="Book.Author" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="form-group row">
+                                <label asp-for="Book.Description" class="col col-lg-4 col-form-label text-right">Edytuj opis:</label>
+                                <div class="col-12 col-lg-6">
+                                    <input asp-for="Book.Description" class="form-control mr-2" placeholder="@Model.Book.Description" />
+                                    <span asp-validation-for="Book.Description" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="form-group row">
+                                <label asp-for="Book.Department" class="col col-lg-4 col-form-label text-right">Edytuj gatunek:</label>
+                                <div class="col-12 col-lg-6">
+                                    <select asp-for="Book.Department" class="custom-select mr-2" asp-items="Html.GetEnumSelectList<Dept>()">
+                                        <option value="">Select</option>
+                                    </select>
+                                    <span asp-validation-for="Book.Department" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+
+                        <div class="col col-lg-3 d-flex align-items-center justify-content-center flex-column">
+                            <img class="card-img-top imageThumbnail border border-primary mb-3" src="@photoPath" asp-append-version="true" />
+                            <div class="custom-file">
+                                <input asp-for="Photo" class="custom-file-input form-control" />
+                                <label class="custom-file-label text-center">Kliknij tutaj</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col">
+                        <div class="card-footer text-center" style="background-color: rgba(0, 0, 0, 0.25);">
+                            <button type="submit" class="btn btn-success buttonShadow">Aktualizacja</button>
+                            <a asp-page="Books" class="btn btn-danger buttonShadow">Wróć</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div asp-validation-summary="ModelOnly" class="text-danger text-center"></div>
+
+    @section Scripts {
+        <script>
+            $(document).ready(function () {
+                $('.custom-file-input').on("change", function () {
+                    var filename = $(this).val().split("\\").pop();
+                    $(this).next('.custom-file-label').html(filename);
+                });
+            });
+        </script>
+
+        <partial name="_ValidationScriptsPartial" />
+    }
+</form>

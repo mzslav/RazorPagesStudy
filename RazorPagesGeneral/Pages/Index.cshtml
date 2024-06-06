@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="background-image">
+    <div class="text-center home-content">
+        <h1 class="display-4">Witamy w Bibliotece Elektronicznej</h1>
+        <p class="lead">Nasza biblioteka zapewnia dostęp do szerokiej gamy książek, artykułów i innych zasobów, które można przeglądać i pobierać.</p>
+        <p>Dokonaj wyboru i zanurz się w świat wiedzy i rozrywki!</p>
+        <a href="/Books/Books" class="btn btn-brown  buttonShadow mt-3">Zacznij →</a>
+    </div>
+</div>
+
+<style>
+    .background-image {
+        padding-top: 20px;
+        background-image: url('/images/311.jpg'); /* Замініть на шлях до вашого зображення */
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10%;
+        margin-top: 70px;
+    }
+
+    .home-content {
+        background-color: rgba(255, 255, 255, 0.8); /* Напівпрозорий білий фон для тексту */
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+    }
+</style>
